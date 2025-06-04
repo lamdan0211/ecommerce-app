@@ -760,7 +760,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 32px;
 
       @media (max-width: 987px) {
         flex-direction: column;
@@ -929,8 +929,8 @@ header {
 
       h2 {
         font-size: 28px;
-        color: #333;
-        font-weight: 600;
+        color: #000;
+        font-weight: 500;
 
         @media (max-width: 987px) {
           font-size: 24px;
@@ -1453,34 +1453,42 @@ footer {
 
 // CATEGORYSP PAGE STYLES
 .category-product-main {
-  .breadcrumb {
-    font-size: 14px;
-    color: #888;
-    margin: 16px 0 0 0;
-
-    @media (max-width: 987px) {
-      background: #fff;
-      padding: 15px;
-      margin-top: 0;
+  .container{
+    @media(max-width:987px){
+      margin: 0;
+      padding: 0;
     }
-
-    a {
-      color: #2d5fa4;
-      text-decoration: none;
+    .breadcrumb {
+      font-size: 14px;
+      color: #888;
+      margin: 16px 0 0 0;
+  
+      @media (max-width: 987px) {
+        background: #fff;
+        padding: 15px;
+        margin-top: 0;
+      }
+  
+      a {
+        color: #2d5fa4;
+        text-decoration: none;
+      }
     }
   }
 
-  .category-section {
-    margin-top: 8px;
 
-    @media (max-width: 576px) {
+  .category-section {
+    margin-top: 20px;
+    .container{
       padding: 0 15px;
     }
 
     .category-header {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 20px;
 
       .brand-tabs {
         display: flex;
@@ -1517,15 +1525,17 @@ footer {
     .category-tabs {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 60px;
       margin-bottom: 24px;
       overflow-x: auto;
-
+      @media(max-width:987px){
+        gap: 30px;
+      }
       .tab,
       .brand-tab {
         background: #f2f2f2;
         border: none;
-        padding: 8px 20px;
+        padding: 8px 0;
         border-radius: 20px;
         font-size: 16px;
         cursor: pointer;
@@ -1598,40 +1608,40 @@ footer {
         }
 
         .product-name {
-          font-size: 14px;
-          margin: 8px 0 4px 0;
-          color: #222;
-          font-weight: 600;
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 20px;
+          line-height: 20px;
           height: 40px;
+          margin-top: 10px;
         }
 
         .product-price {
-          color: #e60023;
           font-size: 18px;
-          font-weight: bold;
+          color: #FF0036;
+          font-weight: 600;
+          margin-bottom: 4px;
         }
 
         .product-sale {
+          font-size: 14px;
+          font-weight: 500;
           color: #305AC9;
-          font-size: 13px;
-          margin-top: 2px;
         }
       }
     }
 
     .load-more {
-      display: block;
-      margin: 0 auto 24px auto;
-      padding: 10px 32px;
-      background: #fff;
-      color: #212121;
-      border: none;
-      border-radius: 24px;
+      height: 34px;
       font-size: 16px;
-      cursor: pointer;
-      transition: background 0.2s;
       font-weight: 500;
-
+      padding: 0 64px;
+      background-color: #fff;
+      border-radius: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
       &:hover {
         background: #305AC9;
         color: #fff;
@@ -1653,11 +1663,12 @@ footer {
       flex-direction: column;
       align-items: center;
       gap: 16px;
+      padding: 0 15px;
     }
 
     .galaxy-ring-text {
       max-width: 700px;
-      text-align: center;
+      text-align: left;
       margin-bottom: 8px;
 
       h3 {
