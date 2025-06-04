@@ -26,7 +26,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  @media(max-width:987px){
+    padding: 0 15px;
+  }
 }
+
 
 a {
   text-decoration: none;
@@ -1681,6 +1685,9 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    @media(max-width:987px){
+      padding: 0 15px;
+    }
 
     .breadcrumb {
       font-size: 0.98rem;
@@ -3201,6 +3208,9 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    @media(max-width:987px){
+      padding: 0 15px;
+    }
     .breadcrumb {
       font-size: 14px;
       color: #888;
