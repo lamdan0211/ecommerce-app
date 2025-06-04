@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - ASmart</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner" aria-label="Header chính">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Trang chủ SMART"><img src="images/image 12.png" alt="SMART Logo"></a>
+                </div>
+                <form class="search-bar" role="search" aria-label="Tìm kiếm sản phẩm">
+                    <button type="submit" aria-label="Tìm kiếm">
+                        <img src="images/Vector.png">                     
+                     </button>
+                    <input id="search-input" type="text" placeholder="Nhập từ khóa..." aria-label="Tìm kiếm">
+                </form>
+                <div class="header-info">
+                    <nav class="location-dropdown" aria-label="Chọn khu vực">
+                        <button class="dropdown-toggle pc-show-dropdown" aria-haspopup="listbox" aria-expanded="false">
+                            <span>Xem giá, đặt hàng:</br>Toàn Quốc</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <button class="dropdown-toggle mobile-show-dropdown" aria-haspopup="listbox" aria-expanded="true">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.7909 8.98828H0.209144C0.093637 8.98828 0 9.07958 0 9.19221V9.79598C0 9.90861 0.093637 9.99992 0.209144 9.99992H9.7909C9.90641 9.99992 10 9.90861 10 9.79598V9.19221C10 9.07958 9.90641 8.98828 9.7909 8.98828Z" fill="white"/>
+                                <path d="M7.96128 2.97701C7.95573 2.76767 7.93331 2.56333 7.89465 2.37043C7.72705 1.53526 7.26372 0.884762 6.51701 0.437397C5.85853 0.0427689 5.12745 -0.0857658 4.34393 0.0556024C3.88061 0.13902 3.46396 0.313274 3.10593 0.573551C2.59304 0.946322 2.23439 1.42517 2.03985 1.99746C1.91543 2.36341 1.86217 2.7049 1.87759 3.04118C1.89199 3.35901 1.9724 3.68064 2.12355 4.02474C2.34915 4.53868 2.64898 5.05402 3.06747 5.64636C3.50036 6.25896 3.97356 6.85291 4.4737 7.41176C4.54896 7.49578 4.62423 7.57679 4.70361 7.66262C4.74001 7.70172 4.77661 7.74122 4.81363 7.78173L4.91666 7.89382L5.02257 7.78433C5.03573 7.7707 5.04848 7.75806 5.06082 7.74563C5.08817 7.71836 5.11635 7.69009 5.14267 7.65901C5.24035 7.54351 5.33845 7.42841 5.43654 7.31331C5.68188 7.02536 5.93585 6.72778 6.17852 6.4288C6.66426 5.83105 7.06219 5.25053 7.39472 4.65398C7.56273 4.35219 7.75131 3.99787 7.85866 3.61146C7.91378 3.41315 7.96724 3.20079 7.96108 2.97721L7.96128 2.97701ZM6.95648 2.96077C6.96121 3.09011 6.9244 3.22105 6.8843 3.34317C6.76955 3.69207 6.59249 4.02193 6.43455 4.29865C6.16063 4.7779 5.82192 5.26858 5.36888 5.84268C5.24508 5.99928 5.12087 6.15128 4.98946 6.3123C4.96581 6.34117 4.94216 6.37005 4.91851 6.39913C4.86525 6.33516 4.81343 6.273 4.76222 6.21043C4.44717 5.82543 4.04039 5.3137 3.68956 4.76848C3.43497 4.37325 3.17523 3.94313 3.00002 3.47752C2.93668 3.30948 2.87026 3.11337 2.88218 2.91385C2.90645 2.50839 3.0175 2.1649 3.2215 1.86331C3.4033 1.59461 3.64205 1.38146 3.9314 1.22966C4.24316 1.06644 4.56953 0.98382 4.90309 0.98382C4.92756 0.98382 4.95203 0.984422 4.97651 0.985224C5.4425 1.00207 5.85524 1.14945 6.2032 1.42337C6.47445 1.63712 6.67804 1.90983 6.80821 2.23388C6.89726 2.45585 6.94723 2.70049 6.95669 2.96077H6.95648Z" fill="white"/>
+                            </svg>                                
+                            <span>Toàn Quốc</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="listbox">
+                            <li><a href="#" role="option" class="dropdown-item">Hà Nội</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">TP. Hồ Chí Minh</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Đà Nẵng</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Cần Thơ</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Hải Phòng</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Toàn Quốc</a></li>
+                        </ul>
+                    </nav>
+                    <div class="cart" aria-label="Giỏ hàng">
+                        <a href="#" aria-label="Xem giỏ hàng">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_81_628)">
+                                  <path d="M23.4756 4.62542H23.4751C23.0826 4.19063 22.5183 3.94143 21.9278 3.94143H5.98485C5.48852 2.6931 4.60535 1.66805 3.35399 0.891262C2.80984 0.553506 2.21357 0.275104 1.5824 0.0635943C1.45712 0.0216692 1.32706 0 1.19556 0C0.618896 0 0.124475 0.40559 0.019757 0.965219C-0.088308 1.5451 0.244972 2.10379 0.811118 2.29316C1.13579 2.40245 1.62591 2.59747 2.11507 2.90696C3.26697 3.63524 3.9101 4.65745 4.02629 5.94536V5.9642L4.03012 5.98493L4.66799 12.8696C4.82578 14.5697 5.61714 16.1397 6.89671 17.2906C8.17675 18.4414 9.83551 19.075 11.5684 19.075H16.8253C20.0395 19.075 22.7445 16.7031 23.117 13.5578L23.9858 6.21905C24.0542 5.64105 23.8682 5.06022 23.4756 4.62542ZM16.8253 16.7196H11.5684C9.20672 16.7196 7.26346 14.9724 7.04877 12.6557L6.46015 6.29677H21.5696L20.7419 13.2851C20.51 15.2433 18.8264 16.7196 16.8253 16.7196Z" fill="white"/>
+                                  <path d="M7.93921 21.6239H5.78317C5.5146 21.6239 5.29688 21.8384 5.29688 22.103V23.5214C5.29688 23.786 5.5146 24.0005 5.78317 24.0005H7.93921C8.20778 24.0005 8.4255 23.786 8.4255 23.5214V22.103C8.4255 21.8384 8.20778 21.6239 7.93921 21.6239Z" fill="white"/>
+                                  <path d="M22.2805 21.6239H20.1245C19.8559 21.6239 19.6382 21.8384 19.6382 22.103V23.5214C19.6382 23.786 19.8559 24.0005 20.1245 24.0005H22.2805C22.5491 24.0005 22.7668 23.786 22.7668 23.5214V22.103C22.7668 21.8384 22.5491 21.6239 22.2805 21.6239Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_81_628">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <span class="pc-show-cart">Giỏ hàng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="product-main">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="#">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00844 13.998C6.51269 13.998 5.0176 13.998 3.52185 13.998C3.15535 13.998 2.83242 13.8705 2.52997 13.6779C2.20639 13.4722 2.01026 13.167 1.88413 12.8228C1.81809 12.6432 1.78375 12.4427 1.78309 12.2507C1.77516 10.8484 1.77847 9.44596 1.77913 8.04356C1.77913 7.90755 1.77054 7.89909 1.62988 7.89649C1.3862 7.89258 1.1412 7.89909 0.898186 7.88152C0.585168 7.85874 0.32366 7.72664 0.144698 7.46373C-0.0203958 7.2223 -0.0395466 6.96199 0.0634718 6.69192C0.138094 6.49604 0.278094 6.35027 0.435923 6.21687C0.733752 5.96632 1.02894 5.71318 1.32479 5.46068C1.60215 5.2238 1.8795 4.98758 2.15554 4.74874C2.60856 4.35764 3.05959 3.96457 3.51327 3.57347C3.95836 3.19017 4.4061 2.80947 4.85119 2.42552C5.28374 2.05198 5.71232 1.67454 6.14486 1.301C6.57279 0.931365 6.99477 0.553272 7.43656 0.199907C7.7859 -0.0792704 8.23627 -0.0682074 8.62061 0.246762C8.83325 0.421167 9.04061 0.601428 9.24863 0.78169C9.51211 1.00946 9.77296 1.23983 10.0365 1.46759C10.5298 1.89515 11.0237 2.3227 11.5183 2.74895C11.8584 3.04179 12.2025 3.33138 12.5426 3.62488C12.7407 3.79538 12.9329 3.97238 13.1303 4.14353C13.4427 4.4149 13.7583 4.68237 14.0713 4.95308C14.5098 5.33248 14.9477 5.71318 15.3848 6.09387C15.5143 6.20645 15.6397 6.32229 15.7692 6.43552C15.9765 6.61644 16.0287 6.84681 15.9864 7.10451C15.9191 7.51254 15.5724 7.862 15.1048 7.88282C14.8612 7.89323 14.6168 7.89388 14.3731 7.89714C14.2292 7.89909 14.2232 7.90365 14.2232 8.04161C14.2232 8.51471 14.2219 8.98717 14.2232 9.46027C14.2259 10.4221 14.2298 11.3833 14.2345 12.3451C14.2358 12.6887 14.0978 12.9848 13.9115 13.264C13.722 13.5471 13.4645 13.7495 13.1442 13.8744C12.9362 13.9557 12.7222 14 12.4957 14C10.9999 13.9967 9.50485 13.9987 8.0091 13.9987L8.00844 13.998Z" fill="#305AC9"/>
+                    </svg> &nbsp;
+                    Điện Thoại
+                </a> <span>/</span> <a href="#">iPhone</a>
+            </nav>
+            <div class="product-detail product-detail--flex">
+                <!-- Left: Gallery & Slider -->
+                <div class="product-gallery-block">
+                    <div class="product-gallery-main">
+                        <img src="images/xanh-128-1.png" alt="iPhone 14 Pro Max 128GB" id="mainProductImg">
+                        <div class="gallery-slider-index">1/5</div>
+                    </div>
+                    <div class="product-gallery-thumbs">
+                        <div class="thumb-item">
+                            <img src="images/xanh-128-1.png" alt="Xanh 128GB" class="thumb active">
+                        </div>
+                        <div class="thumb-item">
+                            <img src="images/xanh-128-2.png" alt="Xanh 128GB" class="thumb active">
+                        </div>
+                        <div class="thumb-item">
+                            <img src="images/xanh-128-3.png" alt="Xanh 128GB" class="thumb active">
+                        </div>
+                        <div class="thumb-item">
+                            <img src="images/xanh-128-4.png" alt="Xanh 128GB" class="thumb active">
+                        </div>
+                        <div class="thumb-item">
+                            <img src="images/xanh-128-5.png" alt="Xanh 128GB" class="thumb active">
+                        </div>
+                    </div>
+                   
+                </div>
+                <!-- Right: Info -->
+                <div class="product-info-block">
+                    <h1 class="product-title">iPhone 14 Pro Max 128GB (99%)</h1>
+                    <div class="product-price-row">
+                       <div class="product-price-main-row">
+                            <span class="product-price-main">19.190.000đ</span>
+                            <span class="product-price-sale">Giảm 460.000đ</span>
+                       </div>
+                       <div class="break-line"></div>
+                       <div class="product-price-row">
+                             <span class="product-price-installment">Trả góp</span>
+                            <span class="product-price-old">2.299.0000đ / tháng</span>
+                       </div>
+                    </div>
+                    <div class="product-options">
+                        <div class="product-option-group">
+                            <span class="option-label">Dung lượng</span>
+                            <div class="option-list option-list--capacity">
+                                <button class="option-btn active" data-capacity="128">128GB</button>
+                                <button class="option-btn" data-capacity="256">256GB</button>
+                                <button class="option-btn" data-capacity="512">512GB</button>
+                            </div>
+                        </div>
+                        <div class="product-option-group">
+                            <span class="option-label">Màu sắc</span>
+                            <div class="option-list option-list--color">
+                                <button class="option-btn active" data-color="xanh">
+                                    <img src="images/xanh-128-1.png" style="width: 30px; height: auto;"> 
+                                    <span style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+                                        Xanh Mòng Két 
+                                        <span class="color-price">18.900.000đ</span>
+                                    </span>
+                                </button>
+                                <button class="option-btn" data-color="tim">
+                                    <img src="images/xanh-128-1.png" style="width: 30px; height: auto;"> 
+                                    <span style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+                                        Xanh Lưu Ly
+                                        <span class="color-price">18.900.000đ</span>
+                                    </span>
+                                </button>
+                                <button class="option-btn" data-color="den">
+                                    <img src="images/xanh-128-1.png" style="width: 30px; height: auto;"> 
+                                    <span style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+                                        Đen
+                                        <span class="color-price">18.900.000đ</span>
+                                    </span>
+                                </button>
+                                <button class="option-btn" data-color="trang">
+                                    <img src="images/xanh-128-1.png" style="width: 30px; height: auto;"> 
+                                    <span style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+                                        Trắng 
+                                        <span class="color-price">18.900.000đ</span>
+                                    </span>
+                                </button>
+                                <button class="option-btn" data-color="hong">
+                                    <img src="images/xanh-128-1.png" style="width: 30px; height: auto;"> 
+                                    <span style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+                                        Hồng 
+                                        <span class="color-price">18.900.000đ</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-promo-block">
+                        <div class="promo-title"><i class="fa fa-gift"></i> Khuyến Mãi Trị Giá 660.000đ</div>
+                        <ul class="promo-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                    <g clip-path="url(#clip0_3_358)">
+                                      <path d="M8.94052 15.9508C12.8314 15.4627 15.4765 11.527 14.8486 7.16022C14.2206 2.79344 10.5573 -0.350826 6.66642 0.137296C2.77553 0.625417 0.130412 4.56109 0.758388 8.92786C1.38636 13.2946 5.04963 16.4389 8.94052 15.9508Z" fill="#0941CE"/>
+                                      <path d="M8.82533 13.447C12.1122 13.0346 14.3468 9.71009 13.8163 6.02142C13.2859 2.33275 10.1913 -0.323226 6.90437 0.0891256C3.61745 0.501477 1.3829 3.82601 1.91336 7.51468C2.44382 11.2033 5.53841 13.8593 8.82533 13.447Z" fill="#1A4EE5"/>
+                                      <path d="M8.47319 10.5506C11.0612 10.2259 12.8206 7.60828 12.403 4.70392C11.9853 1.79956 9.54869 -0.291696 6.96068 0.0329772C4.37266 0.35765 2.61325 2.9753 3.03092 5.87967C3.44858 8.78403 5.88518 10.8753 8.47319 10.5506Z" fill="#1E5BF4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3_358">
+                                        <rect width="14.2739" height="16" fill="white" transform="translate(0.666016)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                Tặng combo bảo vệ máy (Dán màn hình, ốp lưng)
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                    <g clip-path="url(#clip0_3_358)">
+                                      <path d="M8.94052 15.9508C12.8314 15.4627 15.4765 11.527 14.8486 7.16022C14.2206 2.79344 10.5573 -0.350826 6.66642 0.137296C2.77553 0.625417 0.130412 4.56109 0.758388 8.92786C1.38636 13.2946 5.04963 16.4389 8.94052 15.9508Z" fill="#0941CE"/>
+                                      <path d="M8.82533 13.447C12.1122 13.0346 14.3468 9.71009 13.8163 6.02142C13.2859 2.33275 10.1913 -0.323226 6.90437 0.0891256C3.61745 0.501477 1.3829 3.82601 1.91336 7.51468C2.44382 11.2033 5.53841 13.8593 8.82533 13.447Z" fill="#1A4EE5"/>
+                                      <path d="M8.47319 10.5506C11.0612 10.2259 12.8206 7.60828 12.403 4.70392C11.9853 1.79956 9.54869 -0.291696 6.96068 0.0329772C4.37266 0.35765 2.61325 2.9753 3.03092 5.87967C3.44858 8.78403 5.88518 10.8753 8.47319 10.5506Z" fill="#1E5BF4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3_358">
+                                        <rect width="14.2739" height="16" fill="white" transform="translate(0.666016)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                Hỗ trợ mua củ Sạc nhanh 20W Pisen giá chỉ 249k
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                    <g clip-path="url(#clip0_3_358)">
+                                      <path d="M8.94052 15.9508C12.8314 15.4627 15.4765 11.527 14.8486 7.16022C14.2206 2.79344 10.5573 -0.350826 6.66642 0.137296C2.77553 0.625417 0.130412 4.56109 0.758388 8.92786C1.38636 13.2946 5.04963 16.4389 8.94052 15.9508Z" fill="#0941CE"/>
+                                      <path d="M8.82533 13.447C12.1122 13.0346 14.3468 9.71009 13.8163 6.02142C13.2859 2.33275 10.1913 -0.323226 6.90437 0.0891256C3.61745 0.501477 1.3829 3.82601 1.91336 7.51468C2.44382 11.2033 5.53841 13.8593 8.82533 13.447Z" fill="#1A4EE5"/>
+                                      <path d="M8.47319 10.5506C11.0612 10.2259 12.8206 7.60828 12.403 4.70392C11.9853 1.79956 9.54869 -0.291696 6.96068 0.0329772C4.37266 0.35765 2.61325 2.9753 3.03092 5.87967C3.44858 8.78403 5.88518 10.8753 8.47319 10.5506Z" fill="#1E5BF4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3_358">
+                                        <rect width="14.2739" height="16" fill="white" transform="translate(0.666016)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                Hỗ trợ mua Sạc dự phòng giá chỉ từ 269k (Chi tiết)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-commit-block">
+                        <div class="commit-title">Asmart Cam Kết</div>
+                        <div class="commit-desc">
+                            <ul>
+                                <li>Bảo hành <b>12 tháng</b> chính hãng Apple tại Việt Nam (Xem chi tiết)</li>
+                                <li><b>Bộ sản phẩm:</b> Hộp, máy, ốp lưng, cáp, sạc, cây lấy sim, sách hướng dẫn</li>
+                                <li>Trả trước 30% qua HD Saison. Thủ tục chỉ cần CMND hoặc CCCD; Hoặc trả góp lãi suất 0% qua thẻ tín dụng Visa, Master, JCB.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-action-block">
+                        <button class="buy-btn-main">MUA NGAY <span class="buy-btn-note">(Giảm thêm 200K khi đặt hàng website)</span></button>
+                        <div class="installment-btn-row">
+                            <button class="installment-btn">TRẢ GÓP <span class="installment-note">(Trả góp 0%)</span></button>
+                            <button class="cart-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                    <path d="M28.3664 5.58894H28.3658C27.8915 5.06357 27.2097 4.76247 26.4961 4.76247H7.23214C6.63242 3.2541 5.56528 2.01553 4.05325 1.07692C3.39575 0.668806 2.67527 0.332411 1.91261 0.0768415C1.76124 0.026183 1.60409 0 1.4452 0C0.748408 0 0.150994 0.490078 0.0244626 1.16628C-0.106113 1.86696 0.296592 2.54203 0.980672 2.77085C1.37298 2.9029 1.96519 3.13855 2.55625 3.51251C3.9481 4.39249 4.7252 5.62765 4.8656 7.18383V7.2066L4.87022 7.23164L5.64096 15.5505C5.83163 17.6047 6.78784 19.5018 8.33395 20.8924C9.88064 22.2829 11.8849 23.0485 13.9788 23.0485H20.3308C24.2145 23.0485 27.483 20.1826 27.9331 16.382L28.9829 7.51453C29.0655 6.81613 28.8407 6.11431 28.3664 5.58894ZM20.3308 20.2025H13.9788C11.1252 20.2025 8.7771 18.0913 8.51768 15.292L7.80645 7.60845H26.0634L25.0633 16.0525C24.7831 18.4186 22.7487 20.2025 20.3308 20.2025Z" fill="white"/>
+                                    <path d="M9.59364 26.1284H6.98847C6.66395 26.1284 6.40088 26.3876 6.40088 26.7073V28.4211C6.40088 28.7408 6.66395 29 6.98847 29H9.59364C9.91815 29 10.1812 28.7408 10.1812 28.4211V26.7073C10.1812 26.3876 9.91815 26.1284 9.59364 26.1284Z" fill="white"/>
+                                    <path d="M26.9222 26.1284H24.3171C23.9926 26.1284 23.7295 26.3876 23.7295 26.7073V28.4211C23.7295 28.7408 23.9926 29 24.3171 29H26.9222C27.2468 29 27.5098 28.7408 27.5098 28.4211V26.7073C27.5098 26.3876 27.2468 26.1284 26.9222 26.1284Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phụ Kiện Mua Kèm -->
+            <section class="accessory-section">
+                <h2 class="accessory-title">Phụ Kiện Mua Kèm</h2>
+                <div class="accessory-list">
+                    <div class="accessory-card">
+                        <div class="accessory-card-img"><img src="images/phukien.png" alt="Sạc 2 cổng Anker A2348"></div>
+                        <div class="accessory-card-info">
+                            <div class="accessory-name">Sạc 2 cổng Anker A2348</div>
+                            <div class="accessory-price-row">
+                                <span class="accessory-price">480.000đ</span>
+                                <span class="accessory-sale">Giảm 110.000đ</span>
+                            </div>
+                            <button class="accessory-btn">Chọn sản phẩm</button>
+                        </div>
+                    </div>
+                    <div class="accessory-card">
+                        <div class="accessory-card-img"><img src="images/phukien.png" alt="Sạc 2 cổng Anker A2348"></div>
+                        <div class="accessory-card-info">
+                            <div class="accessory-name">Sạc 2 cổng Anker A2348</div>
+                            <div class="accessory-price-row">
+                                <span class="accessory-price">480.000đ</span>
+                                <span class="accessory-sale">Giảm 110.000đ</span>
+                            </div>
+                            <button class="accessory-btn">Chọn sản phẩm</button>
+                        </div>
+                    </div>
+                    <div class="accessory-card">
+                        <div class="accessory-card-img"><img src="images/phukien.png" alt="Sạc 2 cổng Anker A2348"></div>
+                        <div class="accessory-card-info">
+                            <div class="accessory-name">Sạc 2 cổng Anker A2348</div>
+                            <div class="accessory-price-row">
+                                <span class="accessory-price">480.000đ</span>
+                                <span class="accessory-sale">Giảm 110.000đ</span>
+                            </div>
+                            <button class="accessory-btn">Chọn sản phẩm</button>
+                        </div>
+                    </div>
+                    <div class="accessory-card">
+                        <div class="accessory-card-img"><img src="images/phukien.png" alt="Sạc 2 cổng Anker A2348"></div>
+                        <div class="accessory-card-info">
+                            <div class="accessory-name">Sạc 2 cổng Anker A2348</div>
+                            <div class="accessory-price-row">
+                                <span class="accessory-price">480.000đ</span>
+                                <span class="accessory-sale">Giảm 110.000đ</span>
+                            </div>
+                            <button class="accessory-btn">Chọn sản phẩm</button>
+                        </div>
+                    </div>
+                    <div class="accessory-card">
+                        <div class="accessory-card-img"><img src="images/phukien.png" alt="Sạc 2 cổng Anker A2348"></div>
+                        <div class="accessory-card-info">
+                            <div class="accessory-name">Sạc 2 cổng Anker A2348</div>
+                            <div class="accessory-price-row">
+                                <span class="accessory-price">480.000đ</span>
+                                <span class="accessory-sale">Giảm 110.000đ</span>
+                            </div>
+                            <button class="accessory-btn">Chọn sản phẩm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accessory-summary">
+                    <div class="summary-row">
+                        <span class="summary-label">Tổng đơn:</span>
+                        <span class="summary-total">21.190.000đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-discount-label">Tổng giảm</span>
+                        <span class="summary-discount">760.000đ</span>
+                    </div>
+                    <div class="summary-buy-btn-row" style="display: flex; gap: 10px;">
+                        <button class="summary-buy-btn">
+                            <span>MUA NGAY</span>
+                            <span class="summary-buy-note">(Giảm thêm 200K khi đặt hàng website)</span>
+                        
+                        </button>
+                        <button class="shopping-cart-btn">
+                            <span class="shopping-cart-icons">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Thông Tin Sản Phẩm & Thông Số Kỹ Thuật -->
+            <section class="product-info-specs-section">
+                <div class="info-specs-wrapper">
+                    <div class="info-col">
+                        <h2 class="info-title">Thông Tin Sản Phẩm</h2>
+                        <p class="info-desc-top">
+                            Sở hữu thiết kế tối giản nhưng đầy mạnh mẽ, Galaxy Ring mang đến cách tiếp cận mới trong việc chăm sóc sức khỏe, kiến tạo lối sống khỏe mạnh cho người dùng tại Việt Nam.<br><br>
+                        </p>
+                        <p class="info-desc"> Mới đây, Samsung Việt Nam đã chính thức ra mắt Galaxy Ring – chiếc nhẫn thông minh tích hợp trợ lý sức khỏe cá nhân Galaxy AI mở ra kỷ nguyên mới cho giải pháp theo dõi sức khỏe và giấc ngủ với thiết kế đột phá, nhỏ gọn và tinh tế. Đây là bước tiến mới của Samsung trong việc đơn giản hóa chăm sóc sức khỏe, kiến tạo lối sống khỏe mạnh và tiện nghi cho người dùng các sản phẩm trong hệ sinh thái Galaxy.</p>
+                        <img src="images/pic-cate-1.jpg" alt="Galaxy Ring" class="info-img">
+                        <h3 class="info-subtitle">Giải pháp theo dõi sức khỏe toàn diện với công nghệ tiên tiến</h3>
+                        <p class="info-desc">
+                            Tích hợp công nghệ cảm biến hiện đại, Galaxy Ring cho phép đo nhịp tim, đo biến thiên nhịp tim (HRV), phân tích giấc ngủ chi tiết và đánh giá mức năng lượng hằng ngày. Kết hợp cùng ứng dụng Samsung Health, thiết bị ứng dụng công nghệ Galaxy AI để cung cấp Điểm số năng lượng (Energy Score) độc quyền, phân tích chuyên sâu mọi chỉ số thể chất dựa trên dữ liệu giấc ngủ và vận động.
+                            <br><br>
+                            Chỉ số này được tính toán dựa trên bốn yếu tố chính: giấc ngủ, hoạt động, nhịp tim khi ngủ và biến thiên nhịp tim khi ngủ, giúp người dùng hiểu rõ hơn về trạng thái thể chất và tinh thần hằng ngày.
+                        </p>
+                        <img src="images/pic-cate-2.jpg" alt="Galaxy Ring" class="info-img">
+                    </div>
+                    <div class="specs-col">
+                        <h2 class="specs-title">Thông Số Kỹ Thuật</h2>
+                        <table class="specs-table">
+                            <tr style="background: rgba(229, 229, 229, 0.50); padding: 0 10px;"><th>Màn hình:</th><td>6.9" OLED, 2.000 nits, 120Hz</td></tr>
+                            <tr><th>Camera trước:</th><td>12MP</td></tr>
+                            <tr style="background: rgba(229, 229, 229, 0.50); padding: 0 10px;"><th>Camera sau:</th><td>Camera Duo 48MP & 12MP</td></tr>
+                            <tr><th>Chipset:</th><td>Apple A18 (3nm)</td></tr>
+                            <tr style="background: rgba(229, 229, 229, 0.50); padding: 0 10px;"><th>RAM:</th><td>8GB</td></tr>
+                            <tr><th>Bộ nhớ trong:</th><td>128GB</td></tr>
+                            <tr style="background: rgba(229, 229, 229, 0.50); padding: 0 10px;"><th>Thẻ sim:</th><td>1 Nano Sim & eSim</td></tr>
+                            <tr><th>Pin:</th><td>4.006mAh & 20w</td></tr>
+                            <tr style="background: rgba(229, 229, 229, 0.50); padding: 0 10px;"><th>Hệ điều hành:</th><td>iOS 18</td></tr>
+                        </table>
+                        <button class="specs-btn">Xem thêm sản phẩm</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Đánh Giá & Bình Luận -->
+            <section class="review-section">
+                <div class="review-container">
+                    <div class="review-summary-wrapper">
+                        <div class="review-summary">
+                            <div class="review-summary-row">
+                                <div class="review-score">
+                                    <span class="star"><i class="fas fa-star"></i></span>
+                                    <span class="score">4.8</span><span class="slash">/5</span>
+                                </div>
+                                <div class="review-count">21 người đánh giá</div>
+                            </div>
+                            <div class="review-bars">
+                                <div class="bar-row"><span class="bar-label">5</span><i class="fas fa-star"></i><div class="bar"><div class="bar-fill" style="width:96%"></div></div><span class="bar-num">20</span></div>
+                                <div class="bar-row"><span class="bar-label">4</span><i class="fas fa-star"></i><div class="bar"><div class="bar-fill" style="width:5%"></div></div><span class="bar-num">1</span></div>
+                                <div class="bar-row"><span class="bar-label">3</span><i class="fas fa-star"></i><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span class="bar-num">0</span></div>
+                                <div class="bar-row"><span class="bar-label">2</span><i class="fas fa-star"></i><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span class="bar-num">0</span></div>
+                                <div class="bar-row"><span class="bar-label">1</span><i class="fas fa-star"></i><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span class="bar-num">0</span></div>
+                            </div>
+                        </div>
+                        <button class="review-btn">Bình Luận Ngay!</button>
+                    </div>
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="review-user-row">
+                                <span class="review-user">Hải Yến</span>
+                                <span class="review-dot">•</span>
+                                <span class="review-date">12/05/2025</span>
+                            </div>
+                            <div class="review-content">Máy có dùng 2 sim được không!</div>
+                            <div class="review-actions">
+                                <span class="review-like"><i class="far fa-heart"></i> 12</span>
+                                <span class="review-reply">Trả Lời</span>
+                            </div>
+                            <div class="review-reply-list">
+                                <div class="review-item reply">
+                                    <div class="review-user-row">
+                                        <span class="review-user">Nhật Minh</span>
+                                        <span class="review-dot">•</span>
+                                        <span class="review-date">12/05/2025</span>
+                                    </div>
+                                    <div class="review-content">Dạ chào chị, máy có hỗ trợ 2 sim ạ.</div>
+                                    <div class="review-actions">
+                                        <span class="review-like liked"><i class="fas fa-heart"></i> 2</span>
+                                        <span class="review-reply">Trả Lời</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-user-row">
+                                <span class="review-user">Nhật Anh <span class="review-badge">Đã mua hàng</span></span>
+                                <span class="review-dot">•</span>
+                                <span class="review-date">12/05/2025</span>
+                            </div>
+                            <div class="review-content">Máy ngon giá rẻ, sẽ tiếp tục ủng hộ.</div>
+                            <div class="review-actions">
+                                <span class="review-like"><i class="far fa-heart"></i> 53</span>
+                                <span class="review-reply">Trả Lời</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <ul>
+                        <li><h3>Hỗ trợ</h3></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Quy định bảo hành</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">SiteMap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><h3>Chính sách</h3></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <li><a href="#">Quy định giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul class="contact-list">
+                        <li><h3>Chỉ dẫn</h3></li>
+                        <li><a href="#">56 Hàm Nghi, Đà Nẵng</a></li>
+                        <li><a href="tel:+0905674325">0905674325</a></li>
+                        <li><a href="#">204 Nguyễn Văn Linh</a></li>
+                        <li><a href="tel:+0935442668">0935442668</a></li>
+                        <li><a href="#">314 Lý Thường Kiệt</a></li>
+                        <li><a href="tel:+0898314314">0898314314</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="images/image 12.png" alt="SMART Logo">
+                </div>
+                <div class="copyright">
+                    <p>Copyright © 2016 Asmart. Giấy chứng nhận ĐKKD số 8030219724 do Bộ Tài Chính cấp ngày 03-08-2016.</p>
+                    <p>Bản quyền a-smart.vn</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="./images/Group 19.png"></i></a>
+                    <a href="#"><img src="./images/Group 20.png"></i></a>
+                    <a href="#"><img src="./images/Group 21.png"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/product.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html> 

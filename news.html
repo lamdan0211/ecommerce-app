@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức - ASmart</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner" aria-label="Header chính">
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                  <a href="/" aria-label="Trang chủ SMART"><img src="images/logo-smart.png" alt="SMART Logo"></a>
+              </div>
+              <form class="search-bar" role="search" aria-label="Tìm kiếm sản phẩm">
+                  <button type="submit" aria-label="Tìm kiếm">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M23.3956 20.4786L17.6374 14.7356C18.6977 13.0983 19.2357 11.1572 19.1628 9.19724C18.9783 4.20687 14.9119 0.168857 9.90611 0.00545472C7.26913 -0.0820232 4.77699 0.885186 2.88906 2.72552C1.0003 4.56669 -0.0251879 7.02845 0.000470065 9.65691C0.0261281 12.1467 1.01603 14.4996 2.78891 16.2805C4.56097 18.0622 6.9124 19.0674 9.4095 19.1128C11.3007 19.1483 13.1158 18.6391 14.695 17.6397L20.4689 23.3959C20.8596 23.7854 21.3794 24 21.9323 24C22.4851 24 23.0041 23.7854 23.3948 23.3959C24.2017 22.5921 24.2017 21.2832 23.3948 20.4786H23.3956ZM15.0319 9.55706C15.0319 12.5519 12.5886 14.9873 9.5858 14.9873C6.58298 14.9873 4.13968 12.5519 4.13968 9.55706C4.13968 6.56217 6.58216 4.126 9.5858 4.126C12.5894 4.126 15.0319 6.563 15.0319 9.55706Z" fill="#305AC9"/>
+                      </svg>                            
+                  </button>
+                  <input id="search-input" type="text" placeholder="Nhập từ khóa..." aria-label="Tìm kiếm">
+              </form>
+              <div class="header-info">
+                  <nav class="location-dropdown" aria-label="Chọn khu vực">
+                      <button class="dropdown-toggle pc-show-dropdown" aria-haspopup="listbox" aria-expanded="false">
+                          <span>Xem giá, đặt hàng:</br>Toàn Quốc</span>
+                          <i class="fas fa-chevron-down"></i>
+                      </button>
+                      <button class="dropdown-toggle mobile-show-dropdown" aria-haspopup="listbox" aria-expanded="true">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.7909 8.98828H0.209144C0.093637 8.98828 0 9.07958 0 9.19221V9.79598C0 9.90861 0.093637 9.99992 0.209144 9.99992H9.7909C9.90641 9.99992 10 9.90861 10 9.79598V9.19221C10 9.07958 9.90641 8.98828 9.7909 8.98828Z" fill="white"/>
+                              <path d="M7.96128 2.97701C7.95573 2.76767 7.93331 2.56333 7.89465 2.37043C7.72705 1.53526 7.26372 0.884762 6.51701 0.437397C5.85853 0.0427689 5.12745 -0.0857658 4.34393 0.0556024C3.88061 0.13902 3.46396 0.313274 3.10593 0.573551C2.59304 0.946322 2.23439 1.42517 2.03985 1.99746C1.91543 2.36341 1.86217 2.7049 1.87759 3.04118C1.89199 3.35901 1.9724 3.68064 2.12355 4.02474C2.34915 4.53868 2.64898 5.05402 3.06747 5.64636C3.50036 6.25896 3.97356 6.85291 4.4737 7.41176C4.54896 7.49578 4.62423 7.57679 4.70361 7.66262C4.74001 7.70172 4.77661 7.74122 4.81363 7.78173L4.91666 7.89382L5.02257 7.78433C5.03573 7.7707 5.04848 7.75806 5.06082 7.74563C5.08817 7.71836 5.11635 7.69009 5.14267 7.65901C5.24035 7.54351 5.33845 7.42841 5.43654 7.31331C5.68188 7.02536 5.93585 6.72778 6.17852 6.4288C6.66426 5.83105 7.06219 5.25053 7.39472 4.65398C7.56273 4.35219 7.75131 3.99787 7.85866 3.61146C7.91378 3.41315 7.96724 3.20079 7.96108 2.97721L7.96128 2.97701ZM6.95648 2.96077C6.96121 3.09011 6.9244 3.22105 6.8843 3.34317C6.76955 3.69207 6.59249 4.02193 6.43455 4.29865C6.16063 4.7779 5.82192 5.26858 5.36888 5.84268C5.24508 5.99928 5.12087 6.15128 4.98946 6.3123C4.96581 6.34117 4.94216 6.37005 4.91851 6.39913C4.86525 6.33516 4.81343 6.273 4.76222 6.21043C4.44717 5.82543 4.04039 5.3137 3.68956 4.76848C3.43497 4.37325 3.17523 3.94313 3.00002 3.47752C2.93668 3.30948 2.87026 3.11337 2.88218 2.91385C2.90645 2.50839 3.0175 2.1649 3.2215 1.86331C3.4033 1.59461 3.64205 1.38146 3.9314 1.22966C4.24316 1.06644 4.56953 0.98382 4.90309 0.98382C4.92756 0.98382 4.95203 0.984422 4.97651 0.985224C5.4425 1.00207 5.85524 1.14945 6.2032 1.42337C6.47445 1.63712 6.67804 1.90983 6.80821 2.23388C6.89726 2.45585 6.94723 2.70049 6.95669 2.96077H6.95648Z" fill="white"/>
+                          </svg>                                
+                          <span>Toàn Quốc</span>
+                          <i class="fas fa-chevron-down"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="listbox">
+                          <li><a href="#" role="option" class="dropdown-item">Hà Nội</a></li>
+                          <li><a href="#" role="option" class="dropdown-item">TP. Hồ Chí Minh</a></li>
+                          <li><a href="#" role="option" class="dropdown-item">Đà Nẵng</a></li>
+                          <li><a href="#" role="option" class="dropdown-item">Cần Thơ</a></li>
+                          <li><a href="#" role="option" class="dropdown-item">Hải Phòng</a></li>
+                          <li><a href="#" role="option" class="dropdown-item">Toàn Quốc</a></li>
+                      </ul>
+                  </nav>
+                  <div class="cart" aria-label="Giỏ hàng">
+                      <a href="#" aria-label="Xem giỏ hàng">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <g clip-path="url(#clip0_81_628)">
+                                <path d="M23.4756 4.62542H23.4751C23.0826 4.19063 22.5183 3.94143 21.9278 3.94143H5.98485C5.48852 2.6931 4.60535 1.66805 3.35399 0.891262C2.80984 0.553506 2.21357 0.275104 1.5824 0.0635943C1.45712 0.0216692 1.32706 0 1.19556 0C0.618896 0 0.124475 0.40559 0.019757 0.965219C-0.088308 1.5451 0.244972 2.10379 0.811118 2.29316C1.13579 2.40245 1.62591 2.59747 2.11507 2.90696C3.26697 3.63524 3.9101 4.65745 4.02629 5.94536V5.9642L4.03012 5.98493L4.66799 12.8696C4.82578 14.5697 5.61714 16.1397 6.89671 17.2906C8.17675 18.4414 9.83551 19.075 11.5684 19.075H16.8253C20.0395 19.075 22.7445 16.7031 23.117 13.5578L23.9858 6.21905C24.0542 5.64105 23.8682 5.06022 23.4756 4.62542ZM16.8253 16.7196H11.5684C9.20672 16.7196 7.26346 14.9724 7.04877 12.6557L6.46015 6.29677H21.5696L20.7419 13.2851C20.51 15.2433 18.8264 16.7196 16.8253 16.7196Z" fill="white"/>
+                                <path d="M7.93921 21.6239H5.78317C5.5146 21.6239 5.29688 21.8384 5.29688 22.103V23.5214C5.29688 23.786 5.5146 24.0005 5.78317 24.0005H7.93921C8.20778 24.0005 8.4255 23.786 8.4255 23.5214V22.103C8.4255 21.8384 8.20778 21.6239 7.93921 21.6239Z" fill="white"/>
+                                <path d="M22.2805 21.6239H20.1245C19.8559 21.6239 19.6382 21.8384 19.6382 22.103V23.5214C19.6382 23.786 19.8559 24.0005 20.1245 24.0005H22.2805C22.5491 24.0005 22.7668 23.786 22.7668 23.5214V22.103C22.7668 21.8384 22.5491 21.6239 22.2805 21.6239Z" fill="white"/>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_81_628">
+                                  <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                              </defs>
+                          </svg>
+                      </a>
+                      <span class="pc-show-cart">Giỏ hàng</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <main class="news-main">
+        <div class="container">
+            <!-- Banner lớn đầu trang -->
+            <div class="news-banner-row">
+                <div class="news-banner hot-news-1">
+                    <img src="images/new-top-1.png" alt="Banner 1">
+                    <div class="news-banner-meta">
+                        <div class="news-banner-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="news-card-meta-wrapper">
+                          <div class="news-card-meta">
+                            <span class="author">Hải Yến</span>
+                            <span class="dot">|</span>
+                            <span class="views pc-views">2.314 Người đọc</span>
+                            <span class="date mobile-date">05.05.2025</span>
+                          </div>
+                          <div class="tag-name">#DanhGia</div>
+                      </div>
+                    </div>
+                </div>
+                <div class="news-banner hot-news-2">
+                    <img src="images/new-top-1.png" alt="Banner 2">
+                    <div class="news-banner-meta">
+                        <div class="news-banner-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="news-card-meta-wrapper">
+                          <div class="news-card-meta">
+                            <span class="author">Hải Yến</span>
+                            <span class="dot">|</span>
+                            <span class="views pc-views">2.314 Người đọc</span>
+                            <span class="date mobile-date">05.05.2025</span>
+                          </div>
+                          <div class="tag-name">#DanhGia</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hot-news-list">
+                <div class="tabs ">
+                  <h2 style="background: #fff;">Chủ đề</h2>
+                  <ul class="tabs-toggle news-topic-section">
+                    <li class="active"> <a href="#tab-1">Đánh giá</a></li>
+                    <li> <a href="#tab-2">Thủ thuật</a></li>
+                    <li> <a href="#tab-3">Khuyến mãi</a></li>
+                    <li> <a href="#tab-4">Mẹo hay</a></li>
+                  </ul>
+                  <div id="tab-1" class="active">
+                    <section class="news-grid-section">
+                        <div class="news-grid news-grid-5">
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>   
+                  </div>
+      
+                  <div id="tab-2">
+                    <section class="news-grid-section">
+                        <div class="news-grid news-grid-5">
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                    </section>  
+                  </div>
+      
+                  <div id="tab-3">
+                    <section class="news-grid-section">
+                        <div class="news-grid news-grid-5">
+                          <!-- Card 1 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 2 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 3 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 4 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                    </section>  
+                  </div>
+      
+                  <div id="tab-4">
+                    <section class="news-grid-section">
+                        <div class="news-grid news-grid-5">
+                          <!-- Card 1 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 2 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 3 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 4 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                          <!-- Card 5 -->
+                          <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                           <!-- Card 6 -->
+                           <div class="news-card">
+                            <div><img src="images/news-detail.png" alt="Ảnh tin tức"></div>
+                            <div class="news-card-content">
+                              <div class="news-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                              <div class="news-card-meta-wrapper">
+                                <div class="news-card-meta">
+                                  <span class="author">Hải Yến</span>
+                                  <span class="dot">|</span>
+                                  <span class="views pc-views">2.314 Người đọc</span>
+                                  <span class="date mobile-date">05.05.2025</span>
+                                </div>
+                                <div class="tag-name">#DanhGia</div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>  
+                  </div>
+
+                </div>
+              </div>
+            </div>
+           
+            <div class="news-more">
+                <button class="news-more-btn">Xem thêm tin tức</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content-wrapper">
+          <div class="footer-content">
+              <div class="footer-column">
+                  <ul>
+                      <li><h3>Hỗ trợ</h3></li>
+                      <li><a href="#">Giới thiệu</a></li>
+                      <li><a href="#">Chính sách đổi trả</a></li>
+                      <li><a href="#">Quy định bảo hành</a></li>
+                      <li><a href="#">Chính sách thanh toán</a></li>
+                      <li><a href="#">SiteMap</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <ul>
+                      <li><h3>Chính sách</h3></li>
+                      <li><a href="#">Chính sách đổi trả</a></li>
+                      <li><a href="#">Chính sách bảo hành</a></li>
+                      <li><a href="#">Chính sách thanh toán</a></li>
+                      <li><a href="#">Quy định giao hàng</a></li>
+                      <li><a href="#">Chính sách bảo mật</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <ul class="contact-list">
+                      <li><h3>Chỉ dẫn</h3></li>
+                      <li><a href="#">56 Hàm Nghi, Đà Nẵng</a></li>
+                      <li><a href="tel:+0905674325">0905674325</a></li>
+                      <li><a href="#">204 Nguyễn Văn Linh</a></li>
+                      <li><a href="tel:+0935442668">0935442668</a></li>
+                      <li><a href="#">314 Lý Thường Kiệt</a></li>
+                      <li><a href="tel:+0898314314">0898314314</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <div class="footer-logo">
+                  <img src="images/logo-smart.png" alt="SMART Logo">
+              </div>
+              <div class="copyright">
+                  <p>Copyright © 2016 Asmart. Giấy chứng nhận ĐKKD số 8030219724 do Bộ Tài Chính cấp ngày 03-08-2016.</p>
+                  <p>Bản quyền a-smart.vn</p>
+              </div>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+              </div>
+          </div>
+      </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/jquery.tabslet.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".tabs").tabslet();
+        });
+    </script>
+
+</body>
+</html> 

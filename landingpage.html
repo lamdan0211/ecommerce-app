@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - SMART</title>
+    <meta name="description" content="Landing page sản phẩm mới tại SMART.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner" aria-label="Header chính">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Trang chủ SMART"><img src="images/logo-smart.png" alt="SMART Logo"></a>
+                </div>
+                <form class="search-bar" role="search" aria-label="Tìm kiếm sản phẩm">
+                    <button type="submit" aria-label="Tìm kiếm">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.3956 20.4786L17.6374 14.7356C18.6977 13.0983 19.2357 11.1572 19.1628 9.19724C18.9783 4.20687 14.9119 0.168857 9.90611 0.00545472C7.26913 -0.0820232 4.77699 0.885186 2.88906 2.72552C1.0003 4.56669 -0.0251879 7.02845 0.000470065 9.65691C0.0261281 12.1467 1.01603 14.4996 2.78891 16.2805C4.56097 18.0622 6.9124 19.0674 9.4095 19.1128C11.3007 19.1483 13.1158 18.6391 14.695 17.6397L20.4689 23.3959C20.8596 23.7854 21.3794 24 21.9323 24C22.4851 24 23.0041 23.7854 23.3948 23.3959C24.2017 22.5921 24.2017 21.2832 23.3948 20.4786H23.3956ZM15.0319 9.55706C15.0319 12.5519 12.5886 14.9873 9.5858 14.9873C6.58298 14.9873 4.13968 12.5519 4.13968 9.55706C4.13968 6.56217 6.58216 4.126 9.5858 4.126C12.5894 4.126 15.0319 6.563 15.0319 9.55706Z" fill="#305AC9"/>
+                        </svg>                            
+                    </button>
+                    <input id="search-input" type="text" placeholder="Nhập từ khóa..." aria-label="Tìm kiếm">
+                </form>
+                <div class="header-info">
+                    <nav class="location-dropdown" aria-label="Chọn khu vực">
+                        <button class="dropdown-toggle pc-show-dropdown" aria-haspopup="listbox" aria-expanded="false">
+                            <span>Xem giá, đặt hàng:</br>Toàn Quốc</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <button class="dropdown-toggle mobile-show-dropdown" aria-haspopup="listbox" aria-expanded="true">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.7909 8.98828H0.209144C0.093637 8.98828 0 9.07958 0 9.19221V9.79598C0 9.90861 0.093637 9.99992 0.209144 9.99992H9.7909C9.90641 9.99992 10 9.90861 10 9.79598V9.19221C10 9.07958 9.90641 8.98828 9.7909 8.98828Z" fill="white"/>
+                                <path d="M7.96128 2.97701C7.95573 2.76767 7.93331 2.56333 7.89465 2.37043C7.72705 1.53526 7.26372 0.884762 6.51701 0.437397C5.85853 0.0427689 5.12745 -0.0857658 4.34393 0.0556024C3.88061 0.13902 3.46396 0.313274 3.10593 0.573551C2.59304 0.946322 2.23439 1.42517 2.03985 1.99746C1.91543 2.36341 1.86217 2.7049 1.87759 3.04118C1.89199 3.35901 1.9724 3.68064 2.12355 4.02474C2.34915 4.53868 2.64898 5.05402 3.06747 5.64636C3.50036 6.25896 3.97356 6.85291 4.4737 7.41176C4.54896 7.49578 4.62423 7.57679 4.70361 7.66262C4.74001 7.70172 4.77661 7.74122 4.81363 7.78173L4.91666 7.89382L5.02257 7.78433C5.03573 7.7707 5.04848 7.75806 5.06082 7.74563C5.08817 7.71836 5.11635 7.69009 5.14267 7.65901C5.24035 7.54351 5.33845 7.42841 5.43654 7.31331C5.68188 7.02536 5.93585 6.72778 6.17852 6.4288C6.66426 5.83105 7.06219 5.25053 7.39472 4.65398C7.56273 4.35219 7.75131 3.99787 7.85866 3.61146C7.91378 3.41315 7.96724 3.20079 7.96108 2.97721L7.96128 2.97701ZM6.95648 2.96077C6.96121 3.09011 6.9244 3.22105 6.8843 3.34317C6.76955 3.69207 6.59249 4.02193 6.43455 4.29865C6.16063 4.7779 5.82192 5.26858 5.36888 5.84268C5.24508 5.99928 5.12087 6.15128 4.98946 6.3123C4.96581 6.34117 4.94216 6.37005 4.91851 6.39913C4.86525 6.33516 4.81343 6.273 4.76222 6.21043C4.44717 5.82543 4.04039 5.3137 3.68956 4.76848C3.43497 4.37325 3.17523 3.94313 3.00002 3.47752C2.93668 3.30948 2.87026 3.11337 2.88218 2.91385C2.90645 2.50839 3.0175 2.1649 3.2215 1.86331C3.4033 1.59461 3.64205 1.38146 3.9314 1.22966C4.24316 1.06644 4.56953 0.98382 4.90309 0.98382C4.92756 0.98382 4.95203 0.984422 4.97651 0.985224C5.4425 1.00207 5.85524 1.14945 6.2032 1.42337C6.47445 1.63712 6.67804 1.90983 6.80821 2.23388C6.89726 2.45585 6.94723 2.70049 6.95669 2.96077H6.95648Z" fill="white"/>
+                            </svg>                                
+                            <span>Toàn Quốc</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="listbox">
+                            <li><a href="#" role="option" class="dropdown-item">Hà Nội</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">TP. Hồ Chí Minh</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Đà Nẵng</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Cần Thơ</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Hải Phòng</a></li>
+                            <li><a href="#" role="option" class="dropdown-item">Toàn Quốc</a></li>
+                        </ul>
+                    </nav>
+                    <div class="cart" aria-label="Giỏ hàng">
+                        <a href="#" aria-label="Xem giỏ hàng">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_81_628)">
+                                  <path d="M23.4756 4.62542H23.4751C23.0826 4.19063 22.5183 3.94143 21.9278 3.94143H5.98485C5.48852 2.6931 4.60535 1.66805 3.35399 0.891262C2.80984 0.553506 2.21357 0.275104 1.5824 0.0635943C1.45712 0.0216692 1.32706 0 1.19556 0C0.618896 0 0.124475 0.40559 0.019757 0.965219C-0.088308 1.5451 0.244972 2.10379 0.811118 2.29316C1.13579 2.40245 1.62591 2.59747 2.11507 2.90696C3.26697 3.63524 3.9101 4.65745 4.02629 5.94536V5.9642L4.03012 5.98493L4.66799 12.8696C4.82578 14.5697 5.61714 16.1397 6.89671 17.2906C8.17675 18.4414 9.83551 19.075 11.5684 19.075H16.8253C20.0395 19.075 22.7445 16.7031 23.117 13.5578L23.9858 6.21905C24.0542 5.64105 23.8682 5.06022 23.4756 4.62542ZM16.8253 16.7196H11.5684C9.20672 16.7196 7.26346 14.9724 7.04877 12.6557L6.46015 6.29677H21.5696L20.7419 13.2851C20.51 15.2433 18.8264 16.7196 16.8253 16.7196Z" fill="white"/>
+                                  <path d="M7.93921 21.6239H5.78317C5.5146 21.6239 5.29688 21.8384 5.29688 22.103V23.5214C5.29688 23.786 5.5146 24.0005 5.78317 24.0005H7.93921C8.20778 24.0005 8.4255 23.786 8.4255 23.5214V22.103C8.4255 21.8384 8.20778 21.6239 7.93921 21.6239Z" fill="white"/>
+                                  <path d="M22.2805 21.6239H20.1245C19.8559 21.6239 19.6382 21.8384 19.6382 22.103V23.5214C19.6382 23.786 19.8559 24.0005 20.1245 24.0005H22.2805C22.5491 24.0005 22.7668 23.786 22.7668 23.5214V22.103C22.7668 21.8384 22.5491 21.6239 22.2805 21.6239Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_81_628">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <span class="pc-show-cart">Giỏ hàng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1" role="main" class="landing-main">
+        <div class="container">
+            <nav class="breadcrumb" style="margin-bottom: 24px;">
+                <a href="/">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00844 13.998C6.51269 13.998 5.0176 13.998 3.52185 13.998C3.15535 13.998 2.83242 13.8705 2.52997 13.6779C2.20639 13.4722 2.01026 13.167 1.88413 12.8228C1.81809 12.6432 1.78375 12.4427 1.78309 12.2507C1.77516 10.8484 1.77847 9.44596 1.77913 8.04356C1.77913 7.90755 1.77054 7.89909 1.62988 7.89649C1.3862 7.89258 1.1412 7.89909 0.898186 7.88152C0.585168 7.85874 0.32366 7.72664 0.144698 7.46373C-0.0203958 7.2223 -0.0395466 6.96199 0.0634718 6.69192C0.138094 6.49604 0.278094 6.35027 0.435923 6.21687C0.733752 5.96632 1.02894 5.71318 1.32479 5.46068C1.60215 5.2238 1.8795 4.98758 2.15554 4.74874C2.60856 4.35764 3.05959 3.96457 3.51327 3.57347C3.95836 3.19017 4.4061 2.80947 4.85119 2.42552C5.28374 2.05198 5.71232 1.67454 6.14486 1.301C6.57279 0.931365 6.99477 0.553272 7.43656 0.199907C7.7859 -0.0792704 8.23627 -0.0682074 8.62061 0.246762C8.83325 0.421167 9.04061 0.601428 9.24863 0.78169C9.51211 1.00946 9.77296 1.23983 10.0365 1.46759C10.5298 1.89515 11.0237 2.3227 11.5183 2.74895C11.8584 3.04179 12.2025 3.33138 12.5426 3.62488C12.7407 3.79538 12.9329 3.97238 13.1303 4.14353C13.4427 4.4149 13.7583 4.68237 14.0713 4.95308C14.5098 5.33248 14.9477 5.71318 15.3848 6.09387C15.5143 6.20645 15.6397 6.32229 15.7692 6.43552C15.9765 6.61644 16.0287 6.84681 15.9864 7.10451C15.9191 7.51254 15.5724 7.862 15.1048 7.88282C14.8612 7.89323 14.6168 7.89388 14.3731 7.89714C14.2292 7.89909 14.2232 7.90365 14.2232 8.04161C14.2232 8.51471 14.2219 8.98717 14.2232 9.46027C14.2259 10.4221 14.2298 11.3833 14.2345 12.3451C14.2358 12.6887 14.0978 12.9848 13.9115 13.264C13.722 13.5471 13.4645 13.7495 13.1442 13.8744C12.9362 13.9557 12.7222 14 12.4957 14C10.9999 13.9967 9.50485 13.9987 8.0091 13.9987L8.00844 13.998Z" fill="#305AC9"/>
+                    </svg> &nbsp;
+                    Trang chủ</a> <span>/</span> <a href="#">Sản phẩm mới</a> <span>/</span> <span>Amazfit Active 2 Premium</span>
+            </nav>
+            <div class="landing-content">
+                
+                <p class="landing-desc">Nếu bạn đã từng mê mẩn thiết kế gọn gàng, thời trang và giàu tính năng của Amazfit Active 2, thì phiên bản Amazfit Active 2 Premium chính là bước tiến tiếp theo dành cho bạn, một lựa chọn cao cấp hơn, không chỉ ở vẻ ngoài mà còn ở chất lượng hoàn thiện. Hãy cùng mình trên tay chiếc smartwatch này của nhà Amazfit xem có gì đặc biệt hay không nha.</p>
+                <h2>Mở hộp: Trọn vẹn phụ kiện, sẵn sàng sử dụng</h2>
+                <p class="landing-desc">
+                    Đầu tiên là phần hộp của Amazfit Active 2 Premium vẫn được thiết kế theo phong cách tối giản, tông màu trắng chủ đạo. Mặt trước là hình ảnh sản phẩm nổi bật, mặt sau ghi các thông số kỹ thuật cơ bản. Khi mở hộp, bên trong bao gồm:
+                </p>
+                <ul>
+                    <li>Thiết kế khung thép không gỉ cao cấp, mặt kính cong 3D</li>
+                    <li>Màn hình AMOLED sắc nét, cảm ứng mượt mà</li>
+                    <li>Pin lên tới 14 ngày, sạc nhanh tiện lợi</li>
+                    <li>Chống nước 5ATM, theo dõi sức khỏe 24/7</li>
+                </ul>
+                <p class="landing-desc">
+                    Ấn tượng đầu tiên khi mình mở hộp em smartwatch này đó là sự chỉnh chu, đồng hồ được đặt gọn gàng, có lớp đệm mút bảo vệ tốt. Mặc dù không cầu kỳ, nhưng cách trình bày tổng thể tạo cảm giác cao cấp, tương xứng với tên gọi Premium mà hãng muốn mang đến.
+                </p>
+                <img src="images/pic-post-2.png" alt="Amazfit Active 2 Premium Unbox" class="landing-img">
+                <h2>Vì sao nên chọn Amazfit Active 2 Premium?</h2>
+                <p class="landing-desc">
+                    Đầu tiên là phần hộp của Amazfit Active 2 Premium vẫn được thiết kế theo phong cách tối giản, tông màu trắng chủ đạo. Mặt trước là hình ảnh sản phẩm nổi bật, mặt sau ghi các thông số kỹ thuật cơ bản. Khi mở hộp, bên trong bao gồm:
+                </p>
+                <ul>
+                    <li>Thiết kế khung thép không gỉ cao cấp, mặt kính cong 3D</li>
+                    <li>Màn hình AMOLED sắc nét, cảm ứng mượt mà</li>
+                    <li>Pin lên tới 14 ngày, sạc nhanh tiện lợi</li>
+                    <li>Chống nước 5ATM, theo dõi sức khỏe 24/7</li>
+                </ul>
+                <p class="landing-desc">
+                    Ấn tượng đầu tiên khi mình mở hộp em smartwatch này đó là sự chỉnh chu, đồng hồ được đặt gọn gàng, có lớp đệm mút bảo vệ tốt. Mặc dù không cầu kỳ, nhưng cách trình bày tổng thể tạo cảm giác cao cấp, tương xứng với tên gọi Premium mà hãng muốn mang đến.
+                </p>
+                <img src="images/pic-post-3.png" alt="Amazfit Active 2 Premium Lifestyle" class="landing-img">
+              
+            </div>
+        </div>
+    </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-content-wrapper">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <ul>
+                            <li><h3>Hỗ trợ</h3></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Quy định bảo hành</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">SiteMap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <ul>
+                            <li><h3>Chính sách</h3></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Quy định giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <ul class="contact-list">
+                            <li><h3>Chỉ dẫn</h3></li>
+                            <li><a href="#">56 Hàm Nghi, Đà Nẵng</a></li>
+                            <li><a href="tel:+0905674325">0905674325</a></li>
+                            <li><a href="#">204 Nguyễn Văn Linh</a></li>
+                            <li><a href="tel:+0935442668">0935442668</a></li>
+                            <li><a href="#">314 Lý Thường Kiệt</a></li>
+                            <li><a href="tel:+0898314314">0898314314</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo">
+                        <img src="images/logo-smart.png" alt="SMART Logo">
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright © 2016 Asmart. Giấy chứng nhận ĐKKD số 8030219724 do Bộ Tài Chính cấp ngày 03-08-2016.</p>
+                        <p>Bản quyền a-smart.vn</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+          </footer>
+    <script src="js/main.js"></script>
+</body>
+</html> 
