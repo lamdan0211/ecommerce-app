@@ -95,18 +95,38 @@
             </div>
                 <div class="category-tabs">
                     <button class="tab active">Nổi bật</button>
-                    <button class="tab">Giá</button>
-                    <button class="tab">Giảm giá</button>
-                    <button class="tab">Dung lượng</button>
+                    
+                    <div class="dropdown">
+                        <button class="tab dropdown-toggle">Giá</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Từ thấp đến cao</a></li>
+                            <li><a href="#">Từ cao đến thấp</a></li>
+                            <li><a href="#">Giảm nhiều nhất</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="tab dropdown-toggle">Giảm giá</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Giảm 100.000đ</a></li>
+                            <li><a href="#">Giảm 500.000đ</a></li>
+                            <li><a href="#">Giảm nhiều nhất</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="tab dropdown-toggle">Dung lượng</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">128GB</a></li>
+                            <li><a href="#">256GB</a></li>
+                            <li><a href="#">512GB</a></li>
+                            <li><a href="#">1TB</a></li>
+                            <li><a href="#">2TB</a></li>
+                        </ul>
+                    </div>
+
                 
                 </div>
                 <div class="product-grid">
-                    <div class="product-card">
-                        <img src="images/phone.png" alt="iPhone 16 Plus 128GB (VN/A)">
-                        <div class="product-name">iPhone 16 Plus 128GB (VN/A)</div>
-                        <div class="product-price">28.180.000đ</div>
-                        <div class="product-sale">Giảm 1.110.000đ</div>
-                    </div>
                     <div class="product-card">
                         <img src="images/phone.png" alt="iPhone 16 Plus 128GB (VN/A)">
                         <div class="product-name">iPhone 16 Plus 128GB (VN/A)</div>
@@ -255,5 +275,38 @@
 
     <script src="js/main.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(event) {
+                    const parentDropdown = this.closest('.dropdown');
+
+                    // Close all dropdowns first
+                    document.querySelectorAll('.dropdown.open').forEach(function(openDropdown) {
+                        if (openDropdown !== parentDropdown) {
+                            openDropdown.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle the clicked dropdown
+                    parentDropdown.classList.toggle('open');
+
+                    event.stopPropagation(); // Prevent the click from closing the dropdown immediately
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(event) {
+                dropdownToggles.forEach(function(toggle) {
+                    const parentDropdown = toggle.closest('.dropdown');
+                    if (parentDropdown && !parentDropdown.contains(event.target)) {
+                        parentDropdown.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

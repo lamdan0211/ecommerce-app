@@ -140,6 +140,9 @@ header {
         &:focus-visible{
           outline: none;
         }
+        @media(max-width:987px){
+          height: 34px;
+        }
       }
 
 
@@ -1496,19 +1499,13 @@ footer {
         gap: 10px;
 
         .brand-tab {
-          background: #f2f2f2;
-          border: 1px solid #dedede;
+          border: 1px solid #E5E7EB;
+          border-radius: 4px;
           padding: 8px 16px;
-          border-radius: 8px;
-          font-size: 16px;
-          cursor: pointer;
-          color: #222;
-
-          &.active {
-            background: #fff;
-            color: #2563eb;
-            font-weight: 600;
-          }
+          color: #444444;
+          text-decoration: none;
+          font-weight: 500;
+          background: transparent;
         }
       }
     }
@@ -1524,54 +1521,82 @@ footer {
 
     .category-tabs {
       display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
       align-items: center;
-      gap: 60px;
-      margin-bottom: 24px;
-      overflow-x: auto;
-      @media(max-width:987px){
-        gap: 30px;
-      }
-      .tab,
-      .brand-tab {
-        background: #f2f2f2;
-        border: none;
-        padding: 8px 0;
+      flex-wrap: wrap; // Allow items to wrap if needed
+
+      .tab {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
         border-radius: 20px;
-        font-size: 16px;
+        background-color: #f2f4f7;
         cursor: pointer;
-        color: #222;
-        margin-right: 4px;
-        transition: background 0.2s, color 0.2s;
-        white-space: nowrap;
+        transition: background-color 0.3s, border-color 0.3s;
 
-        @media (max-width: 987px) {
-          gap: 12px;
-          padding-bottom: 8px;
-          margin-top: 10px;
+        &.active {
+          background-color: #305AC9;
+          color: white;
+          border-color: #305AC9;
+        }
+      }
 
-          @media (max-width: 576px) {
-            gap: 8px;
+      .dropdown {
+        position: relative; // Ensure dropdown menu is positioned relative to this container
+        display: inline-block;
 
-            .tab,
-            .brand-tab {
-              padding: 6px 16px;
-              font-size: 16px;
+        .dropdown-toggle {
+          padding: 10px 20px;
+          border: 1px solid #ccc;
+          border-radius: 20px;
+          background-color: #f2f4f7;
+          cursor: pointer;
+          transition: background-color 0.3s, border-color 0.3s;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          &::after {
+            content: '\f078'; /* FontAwesome chevron-down icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &.open .dropdown-toggle::after {
+          transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+          position: absolute; // Position dropdown menu absolutely
+          top: 100%;
+          left: 0;
+          background-color: white;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          z-index: 100; // Ensure dropdown is above other content
+          min-width: 150px;
+          display: none; // Hide by default
+          margin-top: 5px;
+
+          li a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #f5f5f5;
             }
           }
         }
 
-        &.active {
-          background: transparent;
-          color: #2563eb;
-          font-weight: 600;
+        &.open .dropdown-menu {
+          display: block; // Show when parent has 'open' class
         }
-      }
-
-      .brand-tabs {
-        margin-left: auto;
-        display: flex;
-        gap: 8px;
-        flex-shrink: 0;
       }
     }
 
