@@ -1721,34 +1721,35 @@ footer {
 
 // PRODUCT PAGE STYLES
 .product-main {
+  .container{
+    @media(max-width:987px){
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #888;
+      margin: 16px 0 0 0;
+  
+      @media (max-width: 987px) {
+        background: #fff;
+        padding: 15px;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+  
+      a {
+        color: #2d5fa4;
+        text-decoration: none;
+      }
+    }
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     @media(max-width:987px){
       padding: 0 15px;
-    }
-
-    .breadcrumb {
-      font-size: 0.98rem;
-      color: #888;
-      margin-bottom: 15px;
-      margin-top: 15px;
-
-
-      a {
-        color: #2563eb;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      span {
-        margin: 0 6px;
-        color: #bbb;
-      }
     }
 
     .product-detail {
@@ -1764,6 +1765,7 @@ footer {
       @media (max-width: 987px) {
         flex-direction: column;
         gap: 24px;
+        border-radius: 0;
       }
 
       .product-gallery-block {
@@ -2180,6 +2182,9 @@ footer {
     }
 
     .accessory-section {
+      @media(max-width:987px){
+        margin: 0 15px;
+      }
       .accessory-title {
         font-size: 2rem;
         font-weight: bold;
@@ -2224,7 +2229,7 @@ footer {
           flex-direction: row;
           overflow-x: auto;
           gap: 16px;
-          padding: 0 10px 10px 10px;
+          padding: 0;
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
           &::-webkit-scrollbar {
@@ -2418,6 +2423,7 @@ footer {
       background: #fff;
 
       @media (max-width: 987px) {
+        margin: 0 15px;
         padding: 24px 0 0 0;
       }
 
@@ -2576,6 +2582,7 @@ footer {
 
       @media (max-width: 987px) {
         padding: 24px 0 0 0;
+        margin: 0 15px;
       }
 
       .review-container {
@@ -3237,6 +3244,29 @@ footer {
 .news-main {
   background: #f5f6fa;
   min-height: 100vh;
+  
+  .container{
+    @media(max-width:987px){
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #888;
+      margin: 16px 0 0 0;
+  
+      @media (max-width: 987px) {
+        background: #fff;
+        padding: 15px;
+        margin-top: 0;
+      }
+  
+      a {
+        color: #2d5fa4;
+        text-decoration: none;
+      }
+    }
+  }
 
   .container {
     max-width: 1200px;
@@ -3244,22 +3274,6 @@ footer {
     padding: 0 24px;
     @media(max-width:987px){
       padding: 0 15px;
-    }
-    .breadcrumb {
-      font-size: 14px;
-      color: #888;
-      margin: 16px 0 0 0;
-
-      @media (max-width: 987px) {
-        background: #fff;
-        padding: 15px;
-        margin-top: 0;
-      }
-
-      a {
-        color: #2d5fa4;
-        text-decoration: none;
-      }
     }
 
     .news-banner-row {
