@@ -1729,7 +1729,7 @@ footer {
     .breadcrumb {
       font-size: 14px;
       color: #888;
-      margin: 16px 0 0 0;
+      margin: 15px 0 15px 0;
   
       @media (max-width: 987px) {
         background: #fff;
@@ -3557,6 +3557,7 @@ footer {
 
               @media (max-width: 987px) {
                 font-size: 12px;
+                padding-top: 0 !important;
               }
 
               .news-card-info {
