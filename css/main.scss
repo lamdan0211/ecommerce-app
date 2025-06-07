@@ -2586,12 +2586,12 @@ footer {
       }
 
       .review-container {
-        max-width: 1400px;
-        margin: 0 auto 40px auto;
+        max-width: 1152px;
+        margin: 0 auto 30px auto;
+        padding: 30px 24px;
         background: #fff;
         border-radius: 16px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.004);
-        padding: 32px 36px 32px 36px;
 
         @media (max-width: 987px) {
           padding: 16px 6px 16px 6px;
@@ -4091,12 +4091,12 @@ footer {
     }
 
     .review-container {
-      max-width: 1400px;
-      margin: 0 auto 40px auto;
+      max-width: 1152px;
+      margin: 0 auto 30px auto;
+      padding: 30px 24px;
       background: #fff;
       border-radius: 16px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.004);
-      padding: 32px 36px 32px 36px;
 
       @media (max-width: 987px) {
         padding: 16px 6px 16px 6px;
@@ -4382,6 +4382,7 @@ footer {
       border-radius: 18px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       padding: 40px 40px 32px 40px;
+      margin-bottom: 30px;
 
       @media (max-width: 987px) {
         padding: 15px;
