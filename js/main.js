@@ -193,43 +193,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ===== COUNTDOWN TIMER (Đếm ngược ở banner sản phẩm) =====
-    function updateCountdown() {
-        const countdownElement = document.querySelector('.section-header h2');
-        if (!countdownElement || !countdownElement.textContent.includes('KẾT THÚC SAU')) return;
+    // function updateCountdown() {
+    //     const countdownElement = document.querySelector('.section-header h2');
+    //     if (!countdownElement || !countdownElement.textContent.includes('KẾT THÚC SAU')) return;
         
-        // Parse the current time from the element
-        let timeString = countdownElement.textContent.replace('KẾT THÚC SAU: ', '');
-        let [hours, minutes, seconds] = timeString.split(':').map(Number);
+    //     // Parse the current time from the element
+    //     let timeString = countdownElement.textContent.replace('KẾT THÚC SAU: ', '');
+    //     let [hours, minutes, seconds] = timeString.split(':').map(Number);
         
-        // Decrease one second
-        seconds--;
+    //     // Decrease one second
+    //     seconds--;
         
-        // Handle time rollover
-        if (seconds < 0) {
-            seconds = 59;
-            minutes--;
+    //     // Handle time rollover
+    //     if (seconds < 0) {
+    //         seconds = 59;
+    //         minutes--;
             
-            if (minutes < 0) {
-                minutes = 59;
-                hours--;
+    //         if (minutes < 0) {
+    //             minutes = 59;
+    //             hours--;
                 
-                if (hours < 0) {
-                    // Reset to a default time when countdown reaches zero
-                    hours = 8;
-                    minutes = 0;
-                    seconds = 0;
-                }
-            }
-        }
+    //             if (hours < 0) {
+    //                 // Reset to a default time when countdown reaches zero
+    //                 hours = 8;
+    //                 minutes = 0;
+    //                 seconds = 0;
+    //             }
+    //         }
+    //     }
         
-        // Format the time with leading zeros
-        const formattedHours = hours.toString().padStart(2, '0');
-        const formattedMinutes = minutes.toString().padStart(2, '0');
-        const formattedSeconds = seconds.toString().padStart(2, '0');
+    //     // Format the time with leading zeros
+    //     const formattedHours = hours.toString().padStart(2, '0');
+    //     const formattedMinutes = minutes.toString().padStart(2, '0');
+    //     const formattedSeconds = seconds.toString().padStart(2, '0');
         
-        // Update the countdown display
-        countdownElement.textContent = `KẾT THÚC SAU: ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
-    }
+    //     // Update the countdown display
+    //     countdownElement.textContent = `KẾT THÚC SAU: ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+    // }
     
     // Update countdown every second
     setInterval(updateCountdown, 1000);

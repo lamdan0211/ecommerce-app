@@ -7,6 +7,7 @@
   <title>Giỏ hàng - ASmart</title>
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <style>
     .cart-list { display: none; }
     .cart-list.active { display: block; }
@@ -30,7 +31,7 @@
               <div class="header-info">
                   <nav class="location-dropdown" aria-label="Chọn khu vực">
                       <button class="dropdown-toggle pc-show-dropdown" aria-haspopup="listbox" aria-expanded="false">
-                          <span>Xem giá, đặt hàng:</br>Toàn Quốc</span>
+                        <span>Xem giá, đặt hàng:</br><strong>Toàn Quốc</strong></span>
                           <i class="fas fa-chevron-down"></i>
                       </button>
                       <button class="dropdown-toggle mobile-show-dropdown" aria-haspopup="listbox" aria-expanded="true">
@@ -85,8 +86,8 @@
       <div class="cart-box">
         <div class="tabs ">
           <ul class="tabs-toggle cart-tabs">
-            <li class="cart-tab active tab-c1"> <a href="#tab-1">Đánh giá</a></li>
-            <li class="cart-tab tab-c2"> <a href="#tab-2">Thủ thuật</a></li>
+            <li class="cart-tab active tab-c1"> <a href="#tab-1">Giao tận nơi</a></li>
+            <li class="cart-tab tab-c2"> <a href="#tab-2">Nhận tại cửa  hàng</a></li>
           </ul>
           <div id="tab-1" class="active">
             <div class="cart-list">
@@ -106,16 +107,38 @@
                   <div class="cart-item-actions">
                     <button class="cart-item-remove">Xóa</button>
                     <div class="cart-item-qty">
-                      <button class="qty-btn">-</button>
+                      <button class="qty-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <g clip-path="url(#clip0_247_1967)">
+                            <path d="M12 5.99969C12 6.48924 11.6032 6.88601 11.1136 6.88601H6.88636V11.1131C6.88636 11.6026 6.48957 12 6 12C5.51043 12 5.11364 11.6026 5.11364 11.1131V6.88601H0.886357C0.396785 6.88601 0 6.48924 0 5.99969C0 5.75492 0.098891 5.53334 0.259436 5.37281C0.419982 5.21227 0.641571 5.11338 0.886357 5.11338H5.11364V0.886312C5.11364 0.396765 5.51043 0 6 0C6.24479 0 6.46637 0.0994964 6.62692 0.259423C6.78686 0.41996 6.88636 0.641538 6.88636 0.886312V5.11338H11.1136C11.6032 5.11338 12 5.51015 12 5.99969Z" fill="#333333"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_247_1967">
+                              <rect width="12" height="12" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
                       <span class="qty-num">1</span>
-                      <button class="qty-btn">+</button>
+                      <button class="qty-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <g clip-path="url(#clip0_247_1969)">
+                            <path d="M0.886312 5.114C0.396815 5.114 0 5.51082 0 6.00032C0 6.48981 0.396815 6.88663 0.886312 6.88663L11.1137 6.88663C11.6032 6.88663 12 6.48981 12 6.00032C12 5.51082 11.6032 5.114 11.1137 5.114L0.886312 5.114Z" fill="#333333"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_247_1969">
+                              <rect width="12" height="12" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="cart-item">
                 <div class="cart-item-row">
-                    <div class="cart-item-img"><img src="images/xanh-128-2.png" alt="iPhone 16 256GB"></div>
+                    <div class="cart-item-img"><img src="images/xanh-128-1.png" alt="iPhone 16 256GB"></div>
                     <div class="cart-item-info">
                       <div class="cart-item-title">iPhone 16 256GB</div>
                       <div class="cart-item-variant">Xám Không Gian</div>
@@ -138,7 +161,7 @@
               </div>
               <div class="cart-item">
                 <div class="cart-item-row">
-                    <div class="cart-item-img"><img src="images/xanh-128-4.png" alt="iPhone 16 512GB"></div>
+                    <div class="cart-item-img"><img src="images/xanh-128-1.png" alt="iPhone 16 512GB"></div>
                     <div class="cart-item-info">
                       <div class="cart-item-title">iPhone 16 512GB</div>
                       <div class="cart-item-variant">Hồng Pastel</div>
@@ -216,11 +239,11 @@
       </div>
       <div class="cart-summary">
         <div class="cart-summary-row">
-          <span class="cart-summary-label">Tổng đơn:</span>
+          <span class="cart-summary-label">Tổng đơn: &nbsp;</span>
           <span class="cart-summary-total"> 19.190.000đ</span>
         </div>
-        <div class="cart-summary-row">
-          <span class="cart-summary-discount-label">Giảm </span>
+        <div class="cart-summary-row discount-1213">
+          <span class="cart-summary-discount-label">Giảm &nbsp; </span>
           <span class="cart-summary-discount"> 460.000đ</span>
         </div>
         <button class="cart-summary-btn">ĐẶT NGAY</button>
