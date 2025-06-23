@@ -12,6 +12,7 @@ $space-40: 40px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
 body {
@@ -2455,17 +2456,19 @@ footer {
         margin: 0 15px;
       }
       .accessory-title {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 28px;
-        color: #111;
-        padding-left: 16px;
+        color: #000;
+        font-family: Inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 17px;
       }
 
       .accessory-list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+        gap: 15px;
         margin-bottom: 32px;
 
         @media (max-width: 1200px) {
@@ -2523,8 +2526,8 @@ footer {
         }
 
         .accessory-card-img {
-          width: 200px;
-          height: 200px;
+          max-width: 200px;
+          max-height: 200px;
           margin-bottom: 10px;
 
           img {
@@ -2539,11 +2542,14 @@ footer {
           text-align: left;
 
           .accessory-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: #222;
+            color: #1E1E1E;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
             margin-bottom: 8px;
-            height: 60px;
+            height: 47px;
           }
 
           .accessory-price-row {
@@ -2553,14 +2559,21 @@ footer {
             margin-bottom: 10px;
 
             .accessory-price {
-              color: #e60023;
-              font-size: 1.2rem;
-              font-weight: bold;
+              color: #FF0036;
+              font-family: Inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
             }
 
             .accessory-sale {
-              color: #2d5fa4;
-              font-size: 1rem;
+              color: #305AC9;
+              font-family: Inter;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
             }
           }
 
@@ -2632,7 +2645,7 @@ footer {
 
           .summary-buy-btn {
             width: 100%;
-            background: #2563eb;
+            background: #0057FF;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -2669,7 +2682,7 @@ footer {
           }
 
           .shopping-cart-btn {
-            background: #2563eb;
+            background: #0057FF;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -2690,6 +2703,7 @@ footer {
     .product-info-specs-section {
       margin-top: 30px;
       background: #fff;
+      border-radius: 8px;
 
       @media (max-width: 987px) {
         margin: 0 15px;
@@ -2698,7 +2712,7 @@ footer {
 
       .info-specs-wrapper {
         display: flex;
-        gap: 32px;
+        gap: 16px;
         align-items: flex-start;
         max-width: 1200px;
         margin: 0 auto;
@@ -2718,7 +2732,7 @@ footer {
         flex: 1;
         background: #fff;
         border-radius: 8px;
-        padding: 32px 32px 24px 32px;
+        padding: 30px 0px 30px 30px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.004);
 
         @media (max-width: 987px) {
@@ -2760,7 +2774,7 @@ footer {
           width: 100%;
           display: block;
           margin: 18px auto 18px auto;
-          border-radius: 10px;
+          border-radius: 0px;
           background: #f7f7fa;
           object-fit: contain;
 
@@ -2859,7 +2873,7 @@ footer {
         margin: 0 auto 30px auto;
         padding: 30px 24px;
         background: #fff;
-        border-radius: 16px;
+        border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.004);
 
         @media (max-width: 987px) {
@@ -2878,6 +2892,7 @@ footer {
         align-items: center;
         margin-bottom: 18px;
         gap: 100px;
+        margin-left: 70px;
 
         @media (max-width: 576px) {
           gap: 20px;
@@ -2898,14 +2913,17 @@ footer {
 
           .star {
             color: #ffb300;
-            font-size: 2.1rem;
+            font-size: 17px;
             margin-right: 6px;
           }
 
           .score {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #222;
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
           }
 
           .slash {
@@ -2916,9 +2934,13 @@ footer {
         }
 
         .review-count {
-          color: #444;
-          font-size: 1.05rem;
-          margin-bottom: 12px;
+          color: #000;
+          text-align: center;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
 
           @media (max-width: 576px) {
             text-align: center;
@@ -2979,18 +3001,23 @@ footer {
       }
 
       .review-btn {
-        background: #2563eb;
-        color: #fff;
+        background: #305AC9;
         border: none;
         border-radius: 22px;
-        padding: 12px 48px;
+        padding: 0px 48px;
         font-size: 1.15rem;
-        font-weight: 600;
-        margin-top: 8px;
         transition: background 0.2s;
         cursor: pointer;
-        width: 350px;
-        margin-left: 200px;
+        width: 300px;
+        margin-left: 170px;
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        height: 34px;
 
         &:hover {
           background: #1a4bac;
@@ -3018,21 +3045,25 @@ footer {
 
           .review-user-row {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            flex-direction: column;
             gap: 6px;
-            font-size: 1.08rem;
+            font-size: 14px;
             font-weight: 600;
-            color: #222;
+            color: #000;
             margin-bottom: 4px;
+            .review-user{
+              padding-right: 5px;
+            }
 
             .review-badge {
-              background: #2563eb;
-              color: #fff;
-              font-size: 0.95rem;
-              border-radius: 8px;
-              padding: 2px 8px;
-              margin-left: 6px;
-              font-weight: 500;
+              color: #305AC9;
+              font-family: Inter;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              letter-spacing: 0.6px;
             }
           }
 
@@ -3042,17 +3073,21 @@ footer {
           }
 
           .review-date {
-            color: #888;
-            font-size: 0.98rem;
+            color: #000;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
             font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.6px;
           }
 
           .review-content {
             background: #f2f4f7;
             border-radius: 6px;
             padding: 10px 12px;
-            font-size: 1.08rem;
-            color: #222;
+            font-size: 14px;
+            color: #000;
             margin-bottom: 8px;
             margin-top: 2px;
           }
@@ -3060,9 +3095,14 @@ footer {
           .review-actions {
             display: flex;
             align-items: center;
-            gap: 18px;
-            font-size: 1.05rem;
-            color: #888;
+            gap: 16px;
+            color: #000;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px; 
+            letter-spacing: 0.6px;
 
             .review-like {
               display: flex;
@@ -3071,7 +3111,7 @@ footer {
               cursor: pointer;
 
               i {
-                color: #bbb;
+                color: #000;
                 font-size: 1.1rem;
 
                 &.fas {
@@ -3085,7 +3125,7 @@ footer {
             }
 
             .review-reply {
-              color: #2563eb;
+              color: #000;
               font-weight: 500;
               cursor: pointer;
 
@@ -3688,10 +3728,10 @@ footer {
               display: flex;
               gap: 6px;
               color: rgba(0, 87, 255, 0.80);
-              font-weight: 600;
+              font-weight: 500;
               font-size: 12px;
               font-style: normal;
-              font-weight: 600;
+              font-weight: 500;
               line-height: normal;
               @media(max-width:987px){
                 color: #2563eb;
@@ -3724,7 +3764,7 @@ footer {
               display: flex;
               gap: 6px;
               color: #2563eb;
-              font-weight: 600;
+              font-weight: 500;
               font-size: 12px;
 
               @media (min-width: 987px) {
@@ -3782,7 +3822,7 @@ footer {
     .hot-news-list {
       h2 {
         color: #000;
-        font-family: Inter;
+        font-family: Inter !important;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -3801,10 +3841,11 @@ footer {
         margin-bottom: 25px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+        flex-wrap: wrap;
 
-        @media (max-width: 1199px) {
-          overflow-x: auto;
-        }
+        // @media (max-width: 1199px) {
+        //   overflow-x: auto;
+        // }
 
         li {
           position: relative;
@@ -3822,6 +3863,7 @@ footer {
             white-space: nowrap;
             padding: 7px 20px;
             color: #333;
+            font-weight: 500;
           }
 
           &.active {
@@ -3856,33 +3898,35 @@ footer {
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        overflow: hidden;
         display: flex;
         flex-direction: column;
 
         @media (max-width: 987px) {
           flex-direction: row;
           margin-bottom: 20px;
+          height: 107px;
         }
 
         img {
           width: 100%;
-          height: 140px;
           object-fit: cover;
           display: block;
           border-radius: 8px;
-
           @media (max-width: 987px) {
             height: 100%;
+            width: 100%;
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            width: 143px;
+            height: 107px;
           }
         }
 
         .news-card-content {
           padding: 15px;
+          width: 100%;
 
           .news-card-title {
             color: #1E1E1E;
@@ -3902,7 +3946,7 @@ footer {
               display: flex;
               gap: 6px;
               color: rgba(0, 87, 255, 0.80);
-              font-weight: 600;
+              font-weight: 500;
               font-size: 12px;
 
               @media (max-width: 987px) {
@@ -3918,7 +3962,6 @@ footer {
 
               .mobile-date {
                 display: none;
-
                 @media (max-width: 987px) {
                   display: block;
                 }
@@ -3926,7 +3969,6 @@ footer {
 
               .pc-views {
                 display: block;
-
                 @media (max-width: 987px) {
                   display: none;
                 }
@@ -3938,7 +3980,7 @@ footer {
               display: flex;
               gap: 6px;
               color: #2563eb;
-              font-weight: 600;
+              font-weight: 500;
               font-size: 12px;
 
               @media (min-width: 987px) {
@@ -3988,6 +4030,7 @@ footer {
 // POST DETAIL PAGE (news-detail)
 .main-content-post {
   .container{
+    max-width: 900px;
     @media(max-width:987px){
       padding: 0;
       margin: 0;
@@ -4014,12 +4057,13 @@ footer {
     margin: 0 auto;
     .news-detail {
       background: #fff;
-      border-radius: 16px;
+      border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       margin-top: 20px;
 
       @media (max-width: 987px) {
-        padding: 18px 6px 12px 6px;
+        padding: 20px 15px;
+        border-radius: 0;
       }
 
       .news-detail-header {
@@ -4030,11 +4074,14 @@ footer {
           border-radius: 12px;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
           margin-bottom: 8px;
+          @media (max-width: 987px) {
+            border-radius: 0;
+          }
         }
       }
 
       .news-detail-body {
-        padding: 10px 40px;
+        padding: 10px 140px;
 
         @media (max-width: 987px) {
           padding: 15px;
@@ -4050,7 +4097,7 @@ footer {
             display: flex;
             gap: 6px;
             color: rgba(0, 87, 255, 0.80);
-            font-weight: 600;
+            font-weight: 500;
             font-size: 14px;
 
             @media (max-width: 987px) {
@@ -4085,7 +4132,7 @@ footer {
             display: flex;
             gap: 6px;
             color: #2563eb;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 12px;
           }
 
@@ -4099,9 +4146,13 @@ footer {
           margin-bottom: 20px;
         }
         .news-detail-content {
-          font-size: 1.08rem;
-          color: #222;
-          line-height: 1.7;
+          color: #1E1E1E;
+          text-align: justify;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
           margin-bottom: 28px;
 
           h2 {
@@ -4128,6 +4179,9 @@ footer {
               width: 100%;
               border-radius: 10px;
               box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+              @media (max-width: 987px) {
+                border-radius: 0;
+              }
             }
           }
         }
@@ -4140,7 +4194,7 @@ footer {
           border-radius: 12px;
           padding: 18px 18px 18px 12px;
           margin: 24px 0 32px 0;
-          border: 1px solid #dedede;
+          border: 1px solid #e5e5e5;
 
           img {
             width: 90px;
@@ -4153,38 +4207,55 @@ footer {
 
           .product-info {
             .product-title {
-              font-size: 1.1rem;
-              font-weight: 600;
-              color: #222;
+              color: #000;
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px; 
+              letter-spacing: 0.7px;
             }
 
             .product-price {
-              color: #e53935;
-              font-size: 1.08rem;
-              font-weight: bold;
+              color: #FF0036;
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 15px; 
+              letter-spacing: 0.7px;
               display: flex;
               align-items: flex-start;
               flex-direction: column;
-              line-height: 20px;
 
               .old-price {
                 color: #305AC9;
-                font-size: 0.98rem;
-                font-weight: 400;
+                font-family: Inter;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
               }
             }
 
             .btn {
               margin-top: 8px;
-              padding: 4px 18px;
-              font-size: 1rem;
-              background: #305AC9;
-              color: #fff;
-              border: none;
+              color: #FFF;
+              text-align: center;
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
               border-radius: 8px;
+              background: #305AC9;
+              width: 150px;
               cursor: pointer;
-              margin-top: 5px;
-
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 4px 0px 6px 0px;
               &:hover {
                 background: #1a4bac;
               }
@@ -4202,6 +4273,9 @@ footer {
 
     @media (max-width: 987px) {
       padding: 15px;
+    }
+    .container{
+      max-width: 1200px;
     }
 
     .related-news-header {
@@ -4222,11 +4296,17 @@ footer {
         .promotion-tab {
           border: 1px solid #E5E7EB;
           border-radius: 4px;
-          padding: 8px 16px;
-          color: #444444;
+          padding: 0px 16px;
           text-decoration: none;
-          font-weight: 500;
           background: transparent;
+          color: #444;
+          text-align: center;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 38px; /* 271.429% */
+          letter-spacing: 0.7px;
         }
       }
 
@@ -4429,12 +4509,20 @@ footer {
       button {
         align-items: center;
         justify-content: center;
-        height: 34px;
+        border-radius: 30px;
+        background: #fff;
+        color: #000;
+        text-align: center;
+        font-family: Inter;
         font-size: 16px;
+        font-style: normal;
         font-weight: 500;
-        padding: 0 64px;
-        background-color: #fff;
-        border-radius: 34px;
+        line-height: 38px; /* 237.5% */
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        width: 300px;
+        flex-shrink: 0;
+        margin: 0 auto;
 
         &:hover {
           background: #305AC9;
@@ -4454,9 +4542,9 @@ footer {
     .review-container {
       max-width: 1152px;
       margin: 0 auto 30px auto;
-      padding: 30px 24px;
-      background: #fff;
-      border-radius: 16px;
+      padding: 30px 0px;
+      background: transparent;
+      border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.004);
 
       @media (max-width: 987px) {
@@ -4473,7 +4561,7 @@ footer {
       display: flex;
       align-items: center;
       margin-bottom: 18px;
-      gap: 100px;
+      gap: 70px;
 
       @media (max-width: 576px) {
         gap: 20px;
@@ -4555,7 +4643,7 @@ footer {
 
             .bar-fill {
               height: 100%;
-              background: #2563eb;
+              background: #305AC9;
               border-radius: 8px;
               transition: width 0.3s;
             }
@@ -4571,18 +4659,23 @@ footer {
     }
 
     .review-btn {
-      background: #2563eb;
-      color: #fff;
+      background: #305AC9;
       border: none;
       border-radius: 22px;
-      padding: 12px 48px;
+      padding: 0px 48px;
       font-size: 1.15rem;
-      font-weight: 600;
-      margin-top: 8px;
       transition: background 0.2s;
       cursor: pointer;
-      width: 350px;
-      margin-left: 200px;
+      width: 300px;
+      margin-left: 170px;
+      color: #FFF;
+      text-align: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      height: 34px;
 
       &:hover {
         background: #1a4bac;
@@ -4600,7 +4693,7 @@ footer {
       .review-item {
         border-radius: 10px;
         margin-bottom: 18px;
-        padding: 18px 18px 10px 18px;
+        padding: 10px 0;
         position: relative;
 
         @media (max-width: 987px) {
@@ -4609,12 +4702,17 @@ footer {
 
         .review-user-row {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
+          flex-direction: column;
           gap: 6px;
-          font-size: 1.08rem;
+          font-size: 14px;
           font-weight: 600;
-          color: #222;
+          color: #000;
           margin-bottom: 4px;
+
+          .review-user{
+            padding-right: 5px;
+          }
 
           .review-badge {
             background: #2563eb;
@@ -4633,9 +4731,13 @@ footer {
         }
 
         .review-date {
-          color: #888;
-          font-size: 0.98rem;
+          color: #000;
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
           font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0.6px;
         }
 
         .review-content {
@@ -4651,9 +4753,14 @@ footer {
         .review-actions {
           display: flex;
           align-items: center;
-          gap: 18px;
-          font-size: 1.05rem;
-          color: #888;
+          gap: 16px;
+          color: #000;
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px; 
+          letter-spacing: 0.6px;
 
           .review-like {
             display: flex;
@@ -4662,7 +4769,7 @@ footer {
             cursor: pointer;
 
             i {
-              color: #bbb;
+              color: #000;
               font-size: 1.1rem;
 
               &.fas {
@@ -4676,7 +4783,7 @@ footer {
           }
 
           .review-reply {
-            color: #2563eb;
+            color: #0000;
             font-weight: 500;
             cursor: pointer;
 
@@ -4687,7 +4794,7 @@ footer {
         }
 
         .review-reply-list {
-          margin-left: 32px;
+          margin-left: 8px;
           margin-top: 8px;
 
           @media (max-width: 987px) {
@@ -4743,7 +4850,7 @@ footer {
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      padding: 50px 80px;
+      padding: 50px 100px;
       margin-bottom: 30px;
 
       @media (max-width: 987px) {
